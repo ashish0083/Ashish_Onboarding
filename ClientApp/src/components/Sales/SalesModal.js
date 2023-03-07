@@ -93,7 +93,6 @@ function SalesModal(props) {
                             <label>Date</label>
                             <input
                                 placeholder='Date'
-                                type='date'
                                 value={date}
                                 onChange={(e) => {
                                     setDate(e.target.value);

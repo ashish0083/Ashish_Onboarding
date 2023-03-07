@@ -10,11 +10,11 @@ namespace Project1.Models;
 public partial class SalesDetail
 {
 
-    public string? Customer { get; set; }
+    public int? Customer { get; set; }
 
-    public string? Product { get; set; }
+    public int? Product { get; set; }
 
-    public string? Store { get; set; }
+    public int? Store { get; set; }
 
     public DateTime DateSold { get; set; }
 

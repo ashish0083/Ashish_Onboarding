@@ -9,7 +9,7 @@ const SalesData = () => {
     const [sales, setSales] = useState();
     const [show, setShow] = useState();
     useEffect(() => {
-        const url = `http://localhost:44455/api/Sales`
+        const url = `http://ashishonboarding.azurewebsites.net/api/Sales`
         fetch(url, {
             "Content-Type": "application/json",
         })
@@ -27,7 +27,7 @@ const SalesData = () => {
 
     function newSale(customer, product, store, date) {
         const data = { customer: customer, product: product, store: store, date: date};
-        const url = `http://localhost:44455/api/Sales`;
+        const url = `http://ashishonboarding.azurewebsites.net/api/Sales`;
         fetch(url, {
             method: 'POST',
             headers: {
@@ -45,7 +45,7 @@ const SalesData = () => {
 
     const editSale = async (product, customer, store, date, id) => {
         const data = { product: product, customer: customer, store: store, date: date, id:id}
-        const url = `http://localhost:44455/api/Sales/${id}`;
+        const url = `http://ashishonboarding.azurewebsites.net/api/Sales/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -80,7 +80,7 @@ const SalesData = () => {
     const { open, size } = state
 
     const deleteSale = async (id) => {
-        const url = await `http://localhost:44455/api/Sales/delete/${id}`;
+        const url = await `http://ashishonboarding.azurewebsites.net/api/Sales/delete/${id}`;
         fetch(url, {
             method: 'DELETE',
         }).then((response) => {
